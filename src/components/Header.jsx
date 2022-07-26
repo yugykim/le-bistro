@@ -23,7 +23,7 @@ const Col = styled.div`
 const H1 = styled.h1`
   margin-left: 3vw;
   font-size: 40px;
-  color: #f8c291;
+  color: #e1b12c;
 `;
 
 const Items = styled.ul`
@@ -40,23 +40,53 @@ const Item = styled.li`
   transition: color 0.3s ease-in-out;
   position: relative;
   font-size: 15px;
-  color: #f8c291;
+  color: #e1b12c;
 `;
 
-const MainPhoto = styled.div`
+const Main = styled(motion.div)``;
+
+const MainPhoto = styled(motion.div)`
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(rgba(0 ,0, 0, 0), rgba(0, 0, 0, 1)), url(${main});
 `;
+
+const Div = styled(motion.div)``;
 
 const navVariants = {
   top: {
     backgroundColor: "rgba(0, 0, 0, 0)",
   },
   scroll: {
-    backgroundColor: "rgba(10, 61, 98,1.0)",
+    backgroundColor: "rgba(25, 42, 86,1.0)",
   }
 }
+
+const container = {
+  hidden: {
+    opacity: 1,
+    scale: 0
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const item = {
+  hidden: {
+    y: 20,
+    opacity: 0
+  },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+};
 
 function Header() {
   const navAnimation = useAnimation();
@@ -79,7 +109,7 @@ function Header() {
         initial={"top"}
       >
         <Col>
-          <H1>Le Bistro</H1>
+          <H1>Chez Laurent</H1>
         </Col>
         <Col>
           <Items>
@@ -90,7 +120,14 @@ function Header() {
           </Items>
         </Col>
       </Nav>
-      <MainPhoto></MainPhoto>
+      <Main
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
+        <MainPhoto key={1} className="item"></MainPhoto>
+        <Div key={2} className="item" variants={item}></Div>
+      </Main>
     </>
   );
 }

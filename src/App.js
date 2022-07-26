@@ -3,9 +3,10 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Location from "./components/Location";
 import PhotoList from "./components/PhotoList";
+import LoadingPage from "./components/Loading";
 import Footer from "./components/Footer";
 import styled, { createGlobalStyle } from 'styled-components';
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Globalstyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,200&display=swap');
@@ -64,16 +65,30 @@ const Main = styled.div`
 `;
 
 function App() {
+  const [Loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
       <Globalstyle />
-      <Header />
-      <About />
-      <PhotoList />
-      <Location />
-      <PhotoList />
-      <Contact />
-      <Footer />
+      {Loading ?(
+        <LoadingPage />
+      ) : (
+        <>
+          <Header />
+          <About />
+          <PhotoList />
+          <Location />
+          <PhotoList />
+          <Contact />
+          <Footer />
+        </>
+      )}
+
     </>
   );
 }
