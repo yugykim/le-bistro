@@ -36,22 +36,25 @@ const Items = styled.ul`
 `;
 
 const Item = styled.li`
-  margin-right: 20px;
+  margin-right: 50px;
   transition: color 0.3s ease-in-out;
   position: relative;
-  font-size: 15px;
+  font-size: 20px;
   color: #e1b12c;
 `;
 
-const Main = styled(motion.div)``;
 
 const MainPhoto = styled(motion.div)`
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  color: white;
   background-image: linear-gradient(rgba(0 ,0, 0, 0), rgba(0, 0, 0, 1)), url(${main});
 `;
 
-const Div = styled(motion.div)``;
 
 const navVariants = {
   top: {
@@ -65,25 +68,37 @@ const navVariants = {
 const container = {
   hidden: {
     opacity: 1,
-    scale: 0
+    scale: 0.99,
+    y: 1
   },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: {
-      delayChildren: 0.1,
-      staggerChildren: 0.2
-    }
+    y: 0
   }
 };
 
 const item = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1
+  }
+};
+
+const Photo = {
   hidden: {
-    y: 20,
-    opacity: 0
+    opacity: 1,
+    y: 1
   },
   visible: {
-    y: 0,
+    opacity: 1,
+    y: 0
+  }
+};
+
+const MainItem = {
+  hidden: { opacity: 0 },
+  visible: {
     opacity: 1
   }
 };
@@ -104,14 +119,19 @@ function Header() {
   return (
     <>
       <Nav
-        variants={navVariants}
-        animate={navAnimation}
-        initial={"top"}
+        className="container"
+        variants={container}
+        initial="hidden"
+        animate="visible"
       >
-        <Col>
-          <H1>Chez Laurent</H1>
+        <Col
+          key={1} className="item" variants={item}
+        >
+          <H1>Logo</H1>
         </Col>
-        <Col>
+        <Col
+          key={2} className="item" variants={item}
+        >
           <Items>
             <Item>About</Item>
             <Item>Loaction</Item>
@@ -120,14 +140,16 @@ function Header() {
           </Items>
         </Col>
       </Nav>
-      <Main
-        variants={container}
+      <MainPhoto
+        className="Photo"
+        variants={Photo}
         initial="hidden"
         animate="visible"
       >
-        <MainPhoto key={1} className="item"></MainPhoto>
-        <Div key={2} className="item" variants={item}></Div>
-      </Main>
+        <motion.h1
+          key={1} className="MainItem" variants={MainItem}
+        >Chez Laurent</motion.h1>
+      </MainPhoto>
     </>
   );
 }

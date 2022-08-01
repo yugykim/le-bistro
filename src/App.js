@@ -5,7 +5,7 @@ import Location from "./components/Location";
 import PhotoList from "./components/PhotoList";
 import LoadingPage from "./components/Loading";
 import Footer from "./components/Footer";
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { useEffect, useState } from "react";
 
 const Globalstyle = createGlobalStyle`
@@ -59,10 +59,6 @@ const Globalstyle = createGlobalStyle`
     padding: 0;
   }
   `;
-
-const Main = styled.div`
-  height: 300vh;
-`;
 
 function App() {
   const [Loading, setLoading] = useState(true);
