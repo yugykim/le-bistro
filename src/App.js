@@ -5,8 +5,9 @@ import Location from "./components/Location";
 import PhotoList from "./components/PhotoList";
 import LoadingPage from "./components/Loading";
 import Footer from "./components/Footer";
+import Test from "./components/Test";
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
-import { useEffect, useState } from "react";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const Globalstyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,200&display=swap');
@@ -61,32 +62,17 @@ const Globalstyle = createGlobalStyle`
   `;
 
 function App() {
-  const [Loading, setLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
   return (
     <>
       <Globalstyle />
-      {Loading ?(
-        <LoadingPage />
-      ) : (
-        <>
-          <Header />
-          <About />
-          <PhotoList />
-          <Location />
-          <PhotoList />
-          <Contact />
-          <Footer />
-        </>
-      )}
-
+      <Header />
+      <About />
+      <Location />
+      <Contact />
+      <Footer />
     </>
   );
 }
 
 export default App;
+

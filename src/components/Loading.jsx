@@ -8,6 +8,7 @@ const H1 = styled(motion.h1)`
 
 const Main = styled(motion.div)`
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,19 +16,15 @@ const Main = styled(motion.div)`
 `;
 
 const container = {
-  hidden: { opacity: 1, scale: 0 },
+  hidden: { opacity: 1, scale: 1 },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2
-    }
   }
 };
 
 const item = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1
   }
@@ -35,15 +32,8 @@ const item = {
 
 function Loading() {
   return (
-    <Main
-    className="container"
-    variants={container}
-    initial="hidden"
-    animate="visible"
-    >
-      <H1
-      key={1} className="item" variants={item}
-      >Chez Laurent</H1>
+    <Main>
+      <H1>Chez Laurent</H1>
     </Main>
   );
 }
