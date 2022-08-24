@@ -2,15 +2,10 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Location from "./components/Location";
-import PhotoList from "./components/PhotoList";
-import LoadingPage from "./components/Loading";
 import Footer from "./components/Footer";
-import Test from "./components/Test";
-import styled, { createGlobalStyle, keyframes } from 'styled-components';
-import { ParallaxProvider } from 'react-scroll-parallax';
+import { createGlobalStyle } from 'styled-components';
 
 const Globalstyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,200&display=swap');
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -56,7 +51,6 @@ const Globalstyle = createGlobalStyle`
   }
   * {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
   }
   `;
@@ -67,9 +61,11 @@ function App() {
       <Globalstyle />
       <Header />
       <About />
+      {/** 
       <Location />
       <Contact />
       <Footer />
+      */}
     </>
   );
 }

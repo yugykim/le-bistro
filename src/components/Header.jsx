@@ -1,9 +1,6 @@
 import { motion, useAnimation, useViewportScroll } from "framer-motion";
-import { ParallaxBanner } from 'react-scroll-parallax';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
-import { Link, useMatch } from "react-router-dom";
-import main from "./img/main.png"
 import { Parallax } from 'react-parallax';
 import background from "./img/background.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,13 +8,15 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 
 const MainPhoto = styled(motion.div)`
+  @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  font-size: 100px;
+  font-size: 10vw;
   color: white;
   flex-direction: column;
+  font-family: 'Italiana', serif;
 `;
 
 const Nav = styled(motion.nav)`
@@ -27,7 +26,6 @@ const Nav = styled(motion.nav)`
   width: 100%;
   top: 0;
   height: 80px;
-  font-size: 12px;
   background-color: transparent;
 `;
 
@@ -37,8 +35,8 @@ const Col = styled(motion.div)`
 `;
 
 const H1 = styled.h1`
-  margin-left: 3vw;
-  font-size: 40px;
+  margin-left: 5vw;
+  font-size: 5vw;
   color: #e1b12c;
 `;
 
@@ -50,13 +48,12 @@ const Name = styled(motion.div)`
 `;
 
 const Scroll = styled(motion.div)`
-  align-items: end;
 `;
 
 
 const Items = styled.ul`
   display: flex;
-  margin-right: 20px;
+  margin-right: 1vw;
   transition: color 0.3s ease-in-out;
   position: relative;
   justify-content: center;
@@ -64,10 +61,10 @@ const Items = styled.ul`
 `;
 
 const Item = styled.li`
-  margin-right: 50px;
+  margin-right: 5vw;
   transition: color 0.3s ease-in-out;
   position: relative;
-  font-size: 20px;
+  font-size: 3vw;
   color: #e1b12c;
 `;
 
@@ -144,7 +141,7 @@ function Header() {
   }, [scrollY, navAnimation]);
   return (
     <>
-      <Parallax bgImage={background} strength={400}>
+      <Parallax bgImage={background} strength={400} style={{ width: "100%" }}>
         <MainPhoto
           className="Photo"
           variants={Photo}
@@ -171,12 +168,16 @@ function Header() {
           <Name
             key={3} className="item" variants={item}
           >Chez Laurent</Name>
-          <motion.div 
+          <motion.div
             key={4} className="item" variants={item}>
             <Scroll
               variants={arrowVariant} animate={navAnimation}
             >
-              <FontAwesomeIcon icon={faChevronDown} style={{ width: "30px" }} />
+              <FontAwesomeIcon icon={faChevronDown} style={{
+                fontSize: "10vw",
+                padding: "10%",
+                marginBottom: "1%"
+              }} />
             </Scroll>
           </motion.div>
         </MainPhoto>
