@@ -6,17 +6,20 @@ import background from "./img/background.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-
 const MainPhoto = styled(motion.div)`
   @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  font-size: 10vw;
-  color: white;
+  font-size: 6vw;
+  color: #f1f2f6;
   flex-direction: column;
   font-family: 'Italiana', serif;
+
+  @media (max-width: 768px) {
+    font-size: 10vw;
+  }
 `;
 
 const Nav = styled(motion.nav)`
@@ -34,10 +37,13 @@ const Col = styled(motion.div)`
   align-items: center;
 `;
 
-const H1 = styled.h1`
+const Logo = styled.h1`
   margin-left: 5vw;
-  font-size: 5vw;
-  color: #e1b12c;
+  font-size: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 5vw;
+  }
 `;
 
 const Name = styled(motion.div)`
@@ -64,9 +70,23 @@ const Item = styled.li`
   margin-right: 5vw;
   transition: color 0.3s ease-in-out;
   position: relative;
-  font-size: 3vw;
-  color: #e1b12c;
+  font-size: 1.2rem;
+
+  @media (max-width: 768px) {
+    font-size: 4vw;
+  }
 `;
+
+const ArrowIcon = styled(FontAwesomeIcon)`
+  font-size: 3rem;
+  padding: 10%;
+  margin- bottom: 1px;
+
+  @media (max-width: 768px) {
+    font-size: 8vw;
+  }
+`;
+
 
 const navVariants = {
   top: {
@@ -152,7 +172,7 @@ function Header() {
             <Col
               key={1} className="item" variants={item}
             >
-              <H1>Logo</H1>
+              <Logo>Logo</Logo>
             </Col>
             <Col
               key={2} className="item" variants={item}
@@ -173,11 +193,7 @@ function Header() {
             <Scroll
               variants={arrowVariant} animate={navAnimation}
             >
-              <FontAwesomeIcon icon={faChevronDown} style={{
-                fontSize: "10vw",
-                padding: "10%",
-                marginBottom: "1%"
-              }} />
+              <ArrowIcon icon={faChevronDown} />
             </Scroll>
           </motion.div>
         </MainPhoto>

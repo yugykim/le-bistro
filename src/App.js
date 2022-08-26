@@ -61,6 +61,7 @@ function App() {
       <Globalstyle />
       <Header />
       <About />
+      <Location />
       {/** 
       <Location />
       <Contact />

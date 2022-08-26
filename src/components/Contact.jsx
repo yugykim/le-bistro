@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 const Wrapper = styled.div`
-  margin-top: 380px;
   height: 50vh;
   background-color: #ecf0f1;
 `;
