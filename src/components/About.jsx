@@ -4,11 +4,12 @@ import wine from "./img/wine.jpg"
 import { Parallax } from 'react-parallax';
 
 const Wrapper = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
-  font-family: 'Italiana', serif;
   width: 100%;
-  color: grey;
+  color:  ${props => props.theme.p};
   height: 70vh;
+  @media (max-width: 768px) {
+    height: 60vh;
+  }
 `;
 
 const OwnerInfo = styled.div`
@@ -48,7 +49,7 @@ const BoxThree = styled.div`
 
 const H2 = styled.h2`
   font-size: 1.8rem;
-  color: #0a3d62;
+  color: ${props => props.theme.h2};
   @media (max-width: 768px) {
     font-size: 3vw;
   }
@@ -57,6 +58,7 @@ const H2 = styled.h2`
 const P = styled.p`
   font-size: 1rem;
   margin-bottom: 20px;
+  line-height: 1.8;
 
   @media (max-width: 768px) {
     font-size: 2vw;
@@ -74,7 +76,7 @@ const SmallP = styled.p`
 `;
 
 const WinePhoto = styled.div`
-  height: 80vh;
+  height: 50vh;
 `;
 
 function About() {

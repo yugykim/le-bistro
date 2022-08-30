@@ -7,15 +7,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 const MainPhoto = styled(motion.div)`
-  @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
   font-size: 6vw;
-  color: #f1f2f6;
+  color:  ${props => props.theme.bannerColor};
   flex-direction: column;
-  font-family: 'Italiana', serif;
 
   @media (max-width: 768px) {
     font-size: 10vw;

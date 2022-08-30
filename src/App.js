@@ -3,7 +3,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Location from "./components/Location";
 import Footer from "./components/Footer";
-import { createGlobalStyle } from 'styled-components';
+import { MainTheme } from "./theme";
+import { createGlobalStyle, ThemeProvider} from 'styled-components';
 
 const Globalstyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -52,12 +53,13 @@ const Globalstyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     padding: 0;
+    font-family:  ${props => props.theme.mainFont};
   }
   `;
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={MainTheme}>
       <Globalstyle />
       <Header />
       <About />
@@ -67,7 +69,7 @@ function App() {
       <Contact />
       <Footer />
       */}
-    </>
+    </ThemeProvider>
   );
 }
 
