@@ -2,9 +2,10 @@ import { motion, useAnimation, useViewportScroll } from "framer-motion";
 import { useEffect } from "react";
 import styled from "styled-components";
 import { Parallax } from 'react-parallax';
-import background from "./img/background.png"
+import test from "./img/test.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { HashLink } from 'react-router-hash-link';
 
 const MainPhoto = styled(motion.div)`
   display: flex;
@@ -70,8 +71,12 @@ const Item = styled.li`
   position: relative;
   font-size: 1.2rem;
 
+  &:hover {
+    color: #EEE8AA;
+  }
+
   @media (max-width: 768px) {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 `;
 
@@ -84,33 +89,6 @@ const ArrowIcon = styled(FontAwesomeIcon)`
     font-size: 8vw;
   }
 `;
-
-
-const navVariants = {
-  top: {
-    backgroundColor: "rgba(0, 0, 0, 0)",
-  },
-  scroll: {
-    backgroundColor: "rgba(25, 42, 86,1.0)",
-  }
-}
-
-const container = {
-  hidden: {
-    opacity: 1,
-    scale: 0.99,
-    y: 1
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2
-    }
-  }
-};
 
 const item = {
   hidden: { opacity: 0 },
@@ -159,7 +137,7 @@ function Header() {
   }, [scrollY, navAnimation]);
   return (
     <>
-      <Parallax bgImage={background} strength={400} style={{ width: "100%" }}>
+      <Parallax bgImage={test} strength={400} style={{ width: "100%" }}>
         <MainPhoto
           className="Photo"
           variants={Photo}
@@ -176,10 +154,9 @@ function Header() {
               key={2} className="item" variants={item}
             >
               <Items>
-                <Item>About</Item>
-                <Item>Loaction</Item>
-                <Item>Contact</Item>
-                <Item>Kr</Item>
+                <HashLink smooth to="#about" style={{ textDecoration: 'none', color: "#DAA520" }}><Item>About</Item></HashLink>
+                <HashLink smooth to="#location" style={{ textDecoration: 'none', color: "#DAA520" }}><Item>Location</Item></HashLink>
+                <HashLink smooth to="#contact" style={{ textDecoration: 'none', color: "#DAA520" }}><Item>Contact</Item></HashLink>
               </Items>
             </Col>
           </Nav>

@@ -82,7 +82,7 @@ const WinePhoto = styled.div`
 function About() {
   return (
     <>
-      <Wrapper>
+      <Wrapper id="about">
         <OwnerInfo>
           <BoxOne>
             <H2>About</H2>

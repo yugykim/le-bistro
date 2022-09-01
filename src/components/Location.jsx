@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import decoImg from "./img/decoImg.png";
+import Map from "./Map";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -58,6 +59,7 @@ const P = styled.p`
 
 const SmallP = styled.p`
   font-size: 1rem;
+  color: black;
   @media (max-width: 768px) {
     font-size: 2vw;
   }
@@ -70,7 +72,7 @@ const DecoImg = styled.div`
 function Loaction() {
   return (
     <>
-      <Wrapper>
+      <Wrapper id="location">
 
         <BoxOne>
           <ContentName>
@@ -86,10 +88,11 @@ function Loaction() {
             <P>레스토랑 밍글스 Restaurant Mingles</P>
           </Name>
           <Location>
-            <SmallP>서울특별시 도산대로67길 19 (청담동 94-6) 힐탑빌딩 2층 Gangnam gu, Chungdam dong 94-6. Seoul, South Korea</SmallP>
+            <SmallP>서울특별시 도산대로67길 19 (청담동 94-6) 힐탑빌딩 2층 <br />Gangnam gu, Chungdam dong 94-6. Seoul, South Korea</SmallP>
           </Location>
         </BoxTwo>
       </Wrapper>
+      <Map />
     </>
   );
 }

@@ -5,26 +5,35 @@ const Wrapper = styled.div`
   left: 0;
   bottom: 0;
   width: 100%;
-  color: white;
+  color: ${props => props.theme.bannerColor};
   text-align: center;
-  height: 30vh;
 `;
 
 const Div = styled.div`
-  background-color: black;
+  background-color: ${props => props.theme.h2};
   align-self: flex-end;
-  height: 80px;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    height: 5vh;
+  }
+`;
+
+const FooterStyle = styled.div`
+  font-size: 13px;
+  @media (max-width: 768px) {
+    font-size: 2vw;
+  }
 `;
 
 function Footer() {
   return (
     <Wrapper>
       <Div>
-        <footer>copyright © Restaurant Mingles All Rights Resereved.</footer>
+        <FooterStyle>copyright © Restaurant Mingles All Rights Resereved.</FooterStyle>
       </Div>
     </Wrapper>
   );

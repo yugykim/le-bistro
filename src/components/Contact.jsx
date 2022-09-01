@@ -1,56 +1,77 @@
 import styled from "styled-components";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import decoImg from "./img/decoImg.png";
 
 const Wrapper = styled.div`
+  width: 100%;
+  color:  ${props => props.theme.p};
   height: 50vh;
-  background-color: #ecf0f1;
+  @media (max-width: 768px) {
+    height: 40vh;
+  }
 `;
 
 const OwnerInfo = styled.div`
   display: flex;
-  margin: 100px;
-  flex-direction: row;
+  margin: 10vw 20vw;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+}
 `;
 
 const BoxOne = styled.div`
-  width: 20%;
-  margin: 30px;
+  width: 100%;
+  text-align: center;
 `;
 
 const BoxTwo = styled.div`
-  width: 40%;
-  height: 50vh;
-  margin: 50px;
-  margin-top: 100px;
+  width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const DecoImg = styled.div`
+  margin: 1vw;
 `;
 
 const BoxThree = styled.div`
-  width: 40%;
-  height: 50vh;
-  margin: 50px;
-  margin-top: 100px;
+  width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const H2 = styled.h2`
-  font-size: 30px;
-  margin-bottom: 30px;
-  border-bottom: 3px solid black;
-  width: 100px;
+  font-size: 1.8rem;
+  color: ${props => props.theme.h2};
+  @media (max-width: 768px) {
+    font-size: 3vw;
+  }
 `;
 
 const P = styled.p`
-  font-size: 20px;
+  font-size: 1rem;
   margin-bottom: 20px;
   line-height: 1.8;
+
+  @media (max-width: 768px) {
+    font-size: 2vw;
+  }
 `;
 
 function Contact() {
-
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <OwnerInfo>
         <BoxOne>
           <H2>Contact</H2>
+          <DecoImg>
+              <img src={`${decoImg}`} style={{ "width": "100px" }} />
+          </DecoImg>
         </BoxOne>
         <BoxTwo>
           <P>Regards marketing, business, collaboration, job request.</P>

@@ -3,8 +3,9 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Location from "./components/Location";
 import Footer from "./components/Footer";
+import Map from "./components/Map";
 import { MainTheme } from "./theme";
-import { createGlobalStyle, ThemeProvider} from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const Globalstyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -34,6 +35,7 @@ const Globalstyle = createGlobalStyle`
   }
   body {
     line-height: 1;
+    font-family: 'Playfair Display SC', serif;
   }
   ol, ul {
     list-style: none;
@@ -53,23 +55,21 @@ const Globalstyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     padding: 0;
-    font-family:  ${props => props.theme.mainFont};
   }
   `;
 
 function App() {
   return (
-    <ThemeProvider theme={MainTheme}>
+    <>
       <Globalstyle />
-      <Header />
-      <About />
-      <Location />
-      {/** 
-      <Location />
-      <Contact />
-      <Footer />
-      */}
-    </ThemeProvider>
+      <ThemeProvider theme={MainTheme}>
+        <Header />
+        <About />
+        <Location />
+        <Contact />
+        <Footer />
+      </ThemeProvider>
+    </>
   );
 }
 
