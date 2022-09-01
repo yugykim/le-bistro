@@ -12,7 +12,7 @@ export default function Map() {
       <GoogleMap
         mapContainerStyle={{ width: "100vw", height: "80vh" }}
         center={center}
-        zoom={17}
+        zoom={16}
       >
         { /* Child components, such as markers, info windows, etc. */}
         < Marker position={{

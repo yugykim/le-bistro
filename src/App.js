@@ -65,8 +65,8 @@ function App() {
       <ThemeProvider theme={MainTheme}>
         <Header />
         <About />
-        <Location />
         <Contact />
+        <Location />
         <Footer />
       </ThemeProvider>
     </>

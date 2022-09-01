@@ -6,7 +6,7 @@ import { Parallax } from 'react-parallax';
 const Wrapper = styled.div`
   width: 100%;
   color:  ${props => props.theme.p};
-  height: 70vh;
+  height: 80vh;
   @media (max-width: 768px) {
     height: 60vh;
   }
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
 const OwnerInfo = styled.div`
   display: flex;
-  margin: 10vw 20vw;
+  margin: 5vw 20vw;
   flex-wrap: wrap;
 
   @media (max-width: 768px) {

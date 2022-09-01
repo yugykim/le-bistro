@@ -4,44 +4,33 @@ import decoImg from "./img/decoImg.png";
 const Wrapper = styled.div`
   width: 100%;
   color:  ${props => props.theme.p};
-  height: 50vh;
+  height: 40vh;
   @media (max-width: 768px) {
-    height: 40vh;
+    height: 15vh;
   }
 `;
 
-const OwnerInfo = styled.div`
-  display: flex;
-  margin: 10vw 20vw;
-  flex-wrap: wrap;
+const Box = styled.div`
+  width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+`;
 
+const Img = styled.img`
+  width: 10vw;
+`;
+
+
+const Content = styled.div`
+  display: flex;
+  margin: 100px;
+  align-items: center;
+  text-align: center;
   @media (max-width: 768px) {
     flex-direction: column;
-}
-`;
-
-const BoxOne = styled.div`
-  width: 100%;
-  text-align: center;
-`;
-
-const BoxTwo = styled.div`
-  width: 50%;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
-
-const DecoImg = styled.div`
-  margin: 1vw;
-`;
-
-const BoxThree = styled.div`
-  width: 50%;
-
-  @media (max-width: 768px) {
-    width: 100%;
+    margin: 20px;
   }
 `;
 
@@ -49,13 +38,12 @@ const H2 = styled.h2`
   font-size: 1.8rem;
   color: ${props => props.theme.h2};
   @media (max-width: 768px) {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 `;
 
 const P = styled.p`
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
   line-height: 1.8;
 
   @media (max-width: 768px) {
@@ -63,26 +51,28 @@ const P = styled.p`
   }
 `;
 
+const DecoImg = styled.div`
+`;
+
 function Contact() {
   return (
     <Wrapper id="contact">
-      <OwnerInfo>
-        <BoxOne>
+      <Content>
+        <Box>
           <H2>Contact</H2>
           <DecoImg>
-              <img src={`${decoImg}`} style={{ "width": "100px" }} />
+            <Img src={`${decoImg}`} />
           </DecoImg>
-        </BoxOne>
-        <BoxTwo>
-          <P>Regards marketing, business, collaboration, job request.</P>
-          <P>Please contact bellow email address info@restaurant-mingles.com</P>
-        </BoxTwo>
-        <BoxThree>
-          <P>Reservation</P>
-          <P>by phone / (+82) 2-515-7306</P>
-          <P>by email / reservation@restaurant-mingles.com</P>
-        </BoxThree>
-      </OwnerInfo>
+          <P>(604) 620-3800 <br />info@stlawrencerestaurant.com</P>
+        </Box>
+        <Box>
+          <H2>Hours</H2>
+          <DecoImg>
+            <Img src={`${decoImg}`} />
+          </DecoImg>
+          <P>Tuesday - Sunday5pm — Late</P>
+        </Box>
+      </Content>
     </Wrapper>
   );
 }
