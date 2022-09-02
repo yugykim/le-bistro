@@ -10,15 +10,11 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  @media (max-width: 768px) {
-    height: 80vh;
-  }
 `;
 
 const BoxOne = styled.div`
   width: 100%;
   text-align: center;
-  margin: 2vw;
 `;
 
 const ContentName = styled.div``;
@@ -30,10 +26,9 @@ const BoxTwo = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-bottom: 4vw;
+  margin-bottom: 5vw;
   @media (max-width: 768px) {
     width: 100%;
-    margin-bottom: 2vw;
   }
 `;
 
@@ -46,11 +41,8 @@ const Location = styled.div`
 `;
 
 const H2 = styled.h2`
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: ${props => props.theme.h2};
-  @media (max-width: 768px) {
-    font-size: 2vw;
-  }
 `
 
 const Img = styled.img`
@@ -58,21 +50,14 @@ const Img = styled.img`
 `;
 
 const P = styled.p`
-  font-size: 1.2rem;
-  @media (max-width: 768px) {
-    font-size: 2vw;
-  }
+  font-size: 1rem;
 `;
 
 const SmallP = styled.p`
-  font-size: 1rem;
-  @media (max-width: 768px) {
-    font-size: 2vw;
-  }
+  font-size: 0.8rem;
 `;
 
 const DecoImg = styled.div`
-  margin: vw;
 `;
 
 function Loaction() {

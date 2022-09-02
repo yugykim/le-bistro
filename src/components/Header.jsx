@@ -155,8 +155,8 @@ function Header() {
             >
               <Items>
                 <HashLink smooth to="#about" style={{ textDecoration: 'none', color: "#DAA520" }}><Item>About</Item></HashLink>
-                <HashLink smooth to="#location" style={{ textDecoration: 'none', color: "#DAA520" }}><Item>Location</Item></HashLink>
                 <HashLink smooth to="#contact" style={{ textDecoration: 'none', color: "#DAA520" }}><Item>Contact</Item></HashLink>
+                <HashLink smooth to="#location" style={{ textDecoration: 'none', color: "#DAA520" }}><Item>Location</Item></HashLink>
               </Items>
             </Col>
           </Nav>

@@ -7,9 +7,6 @@ const Wrapper = styled.div`
   width: 100%;
   color:  ${props => props.theme.p};
   height: 80vh;
-  @media (max-width: 768px) {
-    height: 60vh;
-  }
 `;
 
 const OwnerInfo = styled.div`
@@ -19,6 +16,7 @@ const OwnerInfo = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    margin: 5vw;
   }
 `;
 
@@ -48,35 +46,27 @@ const BoxThree = styled.div`
 `;
 
 const H2 = styled.h2`
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: ${props => props.theme.h2};
-  @media (max-width: 768px) {
-    font-size: 3vw;
-  }
 `
 
 const P = styled.p`
   font-size: 1rem;
   margin-bottom: 20px;
   line-height: 1.8;
-
-  @media (max-width: 768px) {
-    font-size: 2vw;
-  }
 `;
 
 const SmallP = styled.p`
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 20px;
   line-height: 1.8;
-
-  @media (max-width: 768px) {
-    font-size: 2vw;
-  }
 `;
 
 const WinePhoto = styled.div`
-  height: 50vh;
+  height: 40vh;
+  @media (max-width: 768px) {
+    height: 30vh;
+  }
 `;
 
 function About() {
