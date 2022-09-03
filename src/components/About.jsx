@@ -7,6 +7,11 @@ const Wrapper = styled.div`
   width: 100%;
   color:  ${props => props.theme.p};
   height: 80vh;
+  @media (max-width: 850px) and (min-device-width: 765px)  {
+    flex-direction: column;
+    height: 50vh;
+    margin: 1vw;
+  }
 `;
 
 const OwnerInfo = styled.div`
@@ -14,7 +19,7 @@ const OwnerInfo = styled.div`
   margin: 5vw 20vw;
   flex-wrap: wrap;
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     flex-direction: column;
     margin: 5vw;
   }
@@ -32,7 +37,7 @@ const DecoImg = styled.div`
 const BoxTwo = styled.div`
   width: 50%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     width: 100%;
   }
 `;
@@ -40,7 +45,7 @@ const BoxTwo = styled.div`
 const BoxThree = styled.div`
   width: 50%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     width: 100%;
   }
 `;
@@ -64,7 +69,7 @@ const SmallP = styled.p`
 
 const WinePhoto = styled.div`
   height: 40vh;
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     height: 30vh;
   }
 `;

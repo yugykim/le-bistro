@@ -4,14 +4,21 @@ import decoImg from "./img/decoImg.png";
 const Wrapper = styled.div`
   width: 100%;
   color:  ${props => props.theme.p};
-  height: 30vh;
+  height: 25vh;
+  @media (max-width: 850px) and (min-width: 780px){
+    height: 10vh;
+  }
 `;
 
 const Box = styled.div`
   width: 50%;
   @media (max-width: 768px) {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 1vw;
+  }
+  @media (max-width: 850px) and (min-width: 780px){
+    width: 100%;
+    margin-bottom: 4vw;
   }
 `;
 
@@ -29,6 +36,7 @@ const Content = styled.div`
     flex-direction: column;
     margin: 10vw 10vw;
   }
+
 `;
 
 const H2 = styled.h2`
