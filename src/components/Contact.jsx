@@ -4,9 +4,9 @@ import decoImg from "./img/decoImg.png";
 const Wrapper = styled.div`
   width: 100%;
   color:  ${props => props.theme.p};
-  height: 25vh;
-  @media (max-width: 850px) and (min-width: 780px){
-    height: 10vh;
+  height: 30vh;
+  @media (max-width: 850px) and (min-width: 748px){
+    height: 25vh;
   }
 `;
 
@@ -34,13 +34,13 @@ const Content = styled.div`
   text-align: center;
   @media (max-width: 768px) {
     flex-direction: column;
-    margin: 10vw 10vw;
+    margin-top: 10vw;
   }
 
 `;
 
 const H2 = styled.h2`
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: ${props => props.theme.h2};
 `;
 

@@ -41,7 +41,7 @@ const Location = styled.div`
 `;
 
 const H2 = styled.h2`
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: ${props => props.theme.h2};
 `
 
@@ -75,11 +75,8 @@ function Loaction() {
         </BoxOne>
 
         <BoxTwo>
-          <Name>
-            <P>레스토랑 밍글스 Restaurant Mingles</P>
-          </Name>
           <Location>
-            <SmallP>서울특별시 도산대로67길 19 (청담동 94-6) 힐탑빌딩 2층 <br />Gangnam gu, Chungdam dong 94-6. Seoul, South Korea</SmallP>
+            <SmallP>Gangnam gu, Chungdam dong 94-6. Seoul, South Korea</SmallP>
           </Location>
         </BoxTwo>
         <Map />

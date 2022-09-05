@@ -51,7 +51,7 @@ const BoxThree = styled.div`
 `;
 
 const H2 = styled.h2`
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: ${props => props.theme.h2};
 `
 

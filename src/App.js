@@ -35,7 +35,7 @@ const Globalstyle = createGlobalStyle`
   }
   body {
     line-height: 1;
-    font-family: 'Playfair Display SC', serif;
+    font-family: 'Great Vibes', cursive;
   }
   ol, ul {
     list-style: none;
@@ -55,6 +55,7 @@ const Globalstyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
   }
   `;
 
