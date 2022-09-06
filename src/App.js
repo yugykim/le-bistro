@@ -66,9 +66,12 @@ function App() {
       <ThemeProvider theme={MainTheme}>
         <Header />
         <About />
-        <Contact />
         <Location />
+        <Map />
+        <Contact />
+        {/**
         <Footer />
+         */}
       </ThemeProvider>
     </>
   );
