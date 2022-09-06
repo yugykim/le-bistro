@@ -73,7 +73,6 @@ function Loaction() {
             </DecoImg>
           </ContentName>
         </BoxOne>
-
         <BoxTwo>
           <Location>
             <SmallP>Gangnam gu, Chungdam dong 94-6. Seoul, South Korea</SmallP>
