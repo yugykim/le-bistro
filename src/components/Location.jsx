@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import decoImg from "./img/decoImg.png";
-import Map from "./Map";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -9,7 +8,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 25vh;
 `;
 
 const BoxOne = styled.div`
@@ -27,13 +26,9 @@ const BoxTwo = styled.div`
   align-items: center;
   gap: 10px;
   margin-bottom: 5vw;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     width: 100%;
   }
-`;
-
-const Name = styled.div`
-  width: 60%;
 `;
 
 const Location = styled.div`
@@ -49,10 +44,6 @@ const Img = styled.img`
   width: 10vw;
 `;
 
-const P = styled.p`
-  font-size: 1rem;
-`;
-
 const SmallP = styled.p`
   font-size: 0.8rem;
 `;
@@ -64,7 +55,6 @@ function Loaction() {
   return (
     <>
       <Wrapper id="location">
-
         <BoxOne>
           <ContentName>
             <H2>Location</H2>
@@ -78,7 +68,6 @@ function Loaction() {
             <SmallP>Gangnam gu, Chungdam dong 94-6. Seoul, South Korea</SmallP>
           </Location>
         </BoxTwo>
-        <Map />
       </Wrapper>
     </>
   );

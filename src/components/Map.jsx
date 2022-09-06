@@ -1,6 +1,7 @@
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
 import { useMemo } from "react";
 
+
 export default function Map() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
@@ -10,7 +11,7 @@ export default function Map() {
   return (
     isLoaded ? (
       <GoogleMap
-        mapContainerStyle={{ width: "100vw", height: "80vh" }}
+        mapContainerStyle={{ width: "100vw", height: "50vh" }}
         center={center}
         zoom={16}
       >
