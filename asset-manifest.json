@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/le-bistro/static/js/main.626e11ff.js",
+    "main.js": "/le-bistro/static/js/main.20af1d27.js",
     "static/media/test.png": "/le-bistro/static/media/test.6efb130a2684d9cde491.png",
     "static/media/logo.png": "/le-bistro/static/media/logo.1759e907bde5177a1e65.png",
     "static/media/wine.jpg": "/le-bistro/static/media/wine.12335cbbcc9bf6178dbc.jpg",
     "static/media/decoImg.png": "/le-bistro/static/media/decoImg.f30fc5fc34413b7811d3.png",
     "index.html": "/le-bistro/index.html",
-    "main.626e11ff.js.map": "/le-bistro/static/js/main.626e11ff.js.map"
+    "main.20af1d27.js.map": "/le-bistro/static/js/main.20af1d27.js.map"
   },
   "entrypoints": [
-    "static/js/main.626e11ff.js"
+    "static/js/main.20af1d27.js"
   ]
 }
