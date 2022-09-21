@@ -4,6 +4,7 @@ I developed the restaurant website following by client's needs. It is a website 
 Those libraries have provided users with a more professional display about the restaurant.
 
 Live Demo : [https://yugykim.github.io/le-bistro/]
+<br />
 The restaurant's Instagram : [https://www.instagram.com/lebistronamsan/?hl=en]
 
 ### Core Features
